@@ -106,317 +106,171 @@ body {
       }
     }
 
-    .job {
-      margin-bottom: $margin-job;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba($border-color, 1);
+    .experience-section {
+      .job {
+        margin-bottom: $margin-job;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba($border-color, 1);
 
-      &:last-child {
-        border-bottom: none;
-      }
-
-      .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
-
-        .job-title {
-          font-size: $font-size-job-title;
-          font-weight: 600;
-          flex: 1;
-          margin-right: 10px;
-          color: $accent-color;
+        &:last-child {
+          border-bottom: none;
         }
 
-        .job-period,
-        .job-duration {
-          font-size: $font-size-job-title;
-          font-weight: 500;
-          white-space: nowrap;
-          color: $text-color-light;
-          background-color: rgba($border-color, 0.3);
-          padding: 2px 8px;
-          border-radius: 12px;
-          font-size: 10px;
-        }
-      }
-
-      .company-location {
-        font-size: $font-size-company;
-        margin-bottom: 8px;
-        color: $text-color-light;
-        font-style: italic;
-
-        .company {
-          font-weight: 500;
-          color: $text-color;
-        }
-
-        .separator {
-          margin: 0 6px;
-        }
-
-        .location {
-          font-weight: normal;
-        }
-      }
-
-      .job-responsibilities {
-        list-style: none;
-        margin-left: 0;
-        margin-bottom: $margin-list;
-
-        li {
-          font-size: $font-size-base;
+        .job-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
           margin-bottom: 4px;
-          text-align: justify;
-          padding-left: 20px;
-          position: relative;
 
-          &::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
+          .job-title {
+            font-size: $font-size-job-title;
+            font-weight: 600;
+            flex: 1;
+            margin-right: 10px;
             color: $accent-color;
-            font-weight: bold;
+          }
+
+          .job-period,
+          .job-duration {
+            font-size: $font-size-job-title;
+            font-weight: 500;
+            white-space: nowrap;
+            color: $text-color-light;
+            background-color: rgba($border-color, 0.3);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+          }
+        }
+
+        .company-location {
+          font-size: $font-size-company;
+          margin-bottom: 8px;
+          color: $text-color-light;
+          font-style: italic;
+
+          .company {
+            font-weight: 500;
+            color: $text-color;
+          }
+
+          .separator {
+            margin: 0 6px;
+          }
+
+          .location {
+            font-weight: normal;
+          }
+        }
+
+        .job-responsibilities, .job-description {
+          list-style: none;
+          margin-left: 0;
+          margin-bottom: $margin-list;
+
+          li {
+            font-size: $font-size-base;
+            margin-bottom: 4px;
+            text-align: justify;
+            padding-left: 20px;
+            position: relative;
+
+            &::before {
+              content: "▸";
+              position: absolute;
+              left: 0;
+              color: $accent-color;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .job-description {
+          text-align: justify;
+
+          .job-float-img-container {
+            cursor: pointer;
           }
         }
       }
     }
 
-    .job {
-      margin-bottom: $margin-job;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba($border-color, 1);
+    .education-section {
+      .education {
+        margin-bottom: $margin-education;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba($border-color, 1);
 
-      &:last-child {
-        border-bottom: none;
-      }
-
-      .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
-
-        .job-title {
-          font-size: $font-size-job-title;
-          font-weight: 600;
-          flex: 1;
-          margin-right: 10px;
-          color: $accent-color;
+        &:last-child {
+          border-bottom: none;
         }
 
-        .job-period,
-        .job-duration {
-          font-size: $font-size-job-title;
-          font-weight: 500;
-          white-space: nowrap;
-          color: $text-color-light;
-          background-color: rgba($border-color, 0.3);
-          padding: 2px 8px;
-          border-radius: 12px;
-          font-size: 10px;
-        }
-      }
-
-      .company-location {
-        font-size: $font-size-company;
-        margin-bottom: 8px;
-        color: $text-color-light;
-        font-style: italic;
-
-        .company {
-          font-weight: 500;
-          color: $text-color;
-        }
-
-        .separator {
-          margin: 0 6px;
-        }
-
-        .location {
-          font-weight: normal;
-        }
-      }
-
-      .job-responsibilities {
-        list-style: none;
-        margin-left: 0;
-        margin-bottom: $margin-list;
-
-        li {
-          font-size: $font-size-base;
+        .education-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
           margin-bottom: 4px;
-          text-align: justify;
-          padding-left: 20px;
-          position: relative;
 
-          &::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
+          .education-title {
+            font-size: $font-size-education-title;
+            font-weight: 600;
+            flex: 1;
+            margin-right: 10px;
             color: $accent-color;
-            font-weight: bold;
+          }
+
+          .education-period,
+          .education-duration {
+            font-size: $font-size-education-title;
+            font-weight: 500;
+            white-space: nowrap;
+            color: $text-color-light;
+            background-color: rgba($border-color, 0.3);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
           }
         }
-      }
-    }
 
-    .job {
-      margin-bottom: $margin-job;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba($border-color, 1);
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
-
-        .job-title {
-          font-size: $font-size-job-title;
-          font-weight: 600;
-          flex: 1;
-          margin-right: 10px;
-          color: $accent-color;
-        }
-
-        .job-period,
-        .job-duration {
-          font-size: $font-size-job-title;
-          font-weight: 500;
-          white-space: nowrap;
+        .university-location {
+          font-size: $font-size-university;
+          margin-bottom: 8px;
           color: $text-color-light;
-          background-color: rgba($border-color, 0.3);
-          padding: 2px 8px;
-          border-radius: 12px;
-          font-size: 10px;
-        }
-      }
+          font-style: italic;
 
-      .company-location {
-        font-size: $font-size-company;
-        margin-bottom: 8px;
-        color: $text-color-light;
-        font-style: italic;
+          .university {
+            font-weight: 500;
+            color: $text-color;
+          }
 
-        .company {
-          font-weight: 500;
-          color: $text-color;
-        }
+          .separator {
+            margin: 0 6px;
+          }
 
-        .separator {
-          margin: 0 6px;
-        }
-
-        .location {
-          font-weight: normal;
-        }
-      }
-
-      .job-responsibilities {
-        list-style: none;
-        margin-left: 0;
-        margin-bottom: $margin-list;
-
-        li {
-          font-size: $font-size-base;
-          margin-bottom: 4px;
-          text-align: justify;
-          padding-left: 20px;
-          position: relative;
-
-          &::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: $accent-color;
-            font-weight: bold;
+          .location {
+            font-weight: normal;
           }
         }
-      }
-    }
 
-    .education {
-      margin-bottom: $margin-education;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba($border-color, 1);
+        .education-responsibilities {
+          list-style: none;
+          margin-left: 0;
+          margin-bottom: $margin-list;
 
-      &:last-child {
-        border-bottom: none;
-      }
+          li {
+            font-size: $font-size-base;
+            margin-bottom: 4px;
+            text-align: justify;
+            padding-left: 20px;
+            position: relative;
 
-      .education-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
-
-        .education-title {
-          font-size: $font-size-education-title;
-          font-weight: 600;
-          flex: 1;
-          margin-right: 10px;
-          color: $accent-color;
-        }
-
-        .education-period,
-        .education-duration {
-          font-size: $font-size-education-title;
-          font-weight: 500;
-          white-space: nowrap;
-          color: $text-color-light;
-          background-color: rgba($border-color, 0.3);
-          padding: 2px 8px;
-          border-radius: 12px;
-          font-size: 10px;
-        }
-      }
-
-      .university-location {
-        font-size: $font-size-university;
-        margin-bottom: 8px;
-        color: $text-color-light;
-        font-style: italic;
-
-        .university {
-          font-weight: 500;
-          color: $text-color;
-        }
-
-        .separator {
-          margin: 0 6px;
-        }
-
-        .location {
-          font-weight: normal;
-        }
-      }
-
-      .education-responsibilities {
-        list-style: none;
-        margin-left: 0;
-        margin-bottom: $margin-list;
-
-        li {
-          font-size: $font-size-base;
-          margin-bottom: 4px;
-          text-align: justify;
-          padding-left: 20px;
-          position: relative;
-
-          &::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: $accent-color;
-            font-weight: bold;
+            &::before {
+              content: "▸";
+              position: absolute;
+              left: 0;
+              color: $accent-color;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -435,120 +289,179 @@ body {
       }
     }
   }
-}
 
-// Media queries para responsive
-@media print {
-  @page {
-    size: A4;
-    margin: 8mm 7mm 8mm 7mm; // Arriba y abajo más amplios, laterales ajustados
-  }
-
-  html,
-  body {
-    width: 210mm;
-    height: 297mm;
-    margin: 0;
-    padding: 0;
-    background: white;
-  }
-
-  body {
-    font-size: 9px;
-  }
-
-  .cv-container {
-    max-width: 196mm;
-    padding: 7mm 3mm 7mm 3mm; // Arriba y abajo más amplios, laterales ajustados
-    margin: 0 auto;
-    box-shadow: none;
-    border-radius: 0;
-    background: white;
-  }
-
-  .cv-header {
-    margin-bottom: 4mm !important;
-    padding-bottom: 2mm !important;
-    border-bottom-width: 0.3mm !important;
-  }
-
-  .cv-content {
-    .experience-section,
-    .languages-section,
-    .education-section,
-    .skills-section {
-      margin-bottom: 3mm !important;
-
-      .section-title {
-        margin-bottom: 1.5mm !important;
-      }
+  // Media queries para responsive
+  @media print {
+    @page {
+      size: A4;
+      margin: 8mm 7mm 8mm 7mm; // Arriba y abajo más amplios, laterales ajustados
     }
 
-    .job {
-      margin-bottom: 1.5mm !important;
-      padding: 1.5mm 0 !important;
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      padding: 0;
+      background: white;
     }
 
-    .languages-section .languages-list {
-      margin-top: 1mm !important;
-      padding: 1mm 1.5mm !important;
+    body {
+      font-size: 9px;
     }
-  }
 
-  .job,
-  .experience-section,
-  .education-section,
-  .languages-section,
-  .skills-section {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-}
+    .cv-container {
+      max-width: 196mm;
+      padding: 7mm 3mm 7mm 3mm; // Arriba y abajo más amplios, laterales ajustados
+      margin: 0 auto;
+      box-shadow: none;
+      border-radius: 0;
+      background: white;
+    }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  .cv-container {
     .cv-header {
-      .name {
-        font-size: 14px;
-      }
-
-      .contact-info {
-        font-size: 10px;
-        line-height: 1.4;
-      }
+      margin-bottom: 4mm !important;
+      padding-bottom: 2mm !important;
+      border-bottom-width: 0.3mm !important;
     }
 
     .cv-content {
-      .job {
-        .job-header {
-          flex-direction: column;
-          align-items: flex-start;
 
-          .job-title {
-            margin-right: 0;
-            margin-bottom: 2px;
+      .experience-section,
+      .languages-section,
+      .education-section,
+      .skills-section {
+        margin-bottom: 3mm !important;
+
+        .section-title {
+          margin-bottom: 1.5mm !important;
+        }
+      }
+
+      .job {
+        margin-bottom: 1.5mm !important;
+        padding: 1.5mm 0 !important;
+      }
+
+      .languages-section .languages-list {
+        margin-top: 1mm !important;
+        padding: 1mm 1.5mm !important;
+      }
+    }
+
+    .job,
+    .experience-section,
+    .education-section,
+    .languages-section,
+    .skills-section {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .accordion {
+      background-color: lightskyblue;
+
+      .accordion-main-block {
+        background-color: red;
+      }
+
+      .accordion-content {}
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+
+    .cv-container {
+      .cv-header {
+        .name {
+          font-size: 14px;
+        }
+
+        .contact-info {
+          font-size: 10px;
+          line-height: 1.4;
+        }
+      }
+
+      .cv-content {
+        .job {
+          .job-header {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .job-title {
+              margin-right: 0;
+              margin-bottom: 2px;
+            }
           }
         }
       }
     }
   }
-}
 
-// Estilos específicos para mantener la consistencia del diseño original
-.cv-container {
-  .job:last-child {
-    margin-bottom: 0;
+  // Estilos específicos para mantener la consistencia del diseño original
+  .cv-container {
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    // Ajustes para texto justificado en listas
+    .job-responsibilities li,
+    .reports-list li,
+    .inspections-list li {
+      hyphens: auto;
+      word-wrap: break-word;
+    }
   }
 
-  // Ajustes para texto justificado en listas
-  .job-responsibilities li,
-  .reports-list li,
-  .inspections-list li {
-    hyphens: auto;
-    word-wrap: break-word;
+  // Estilos generales para el acordeón
+  .accordion {
+    border-radius: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 16px 0 rgba(44, 62, 80, 0.10), 4px 0 12px -4px rgba(44, 62, 80, 0.08); // Sombra derecha e inferior
+
+    .accordion-main-block {
+      cursor: pointer;
+      padding: 8px 12px;
+      transition: background 0.2s;
+      border-radius: 4px 4px 0 0;
+      &:hover {
+        background: #eaecef;
+      }
+    }
+
+    .accordion-content {
+      padding: 10px 12px;
+      // background: #fff;
+      border-radius: 0 0 4px 4px;
+      border-top: 1px solid $border-color;
+      display: none; // Cambia a block con JS si es necesario
+    }
+  }
+
+  .youtube-iframe-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .job-float-img-container {
+    position: relative;
+    display: inline-block; // Solo ocupa el tamaño de la imagen
+  }
+
+  // Regla global para todas las imágenes flotantes
+  .job-float-img {
+    float: right;
+    width: 180px;
+    height: 101px;
+    object-fit: cover;
+    margin: 0 0 12px 18px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    display: block;
+    cursor: pointer;
   }
 }

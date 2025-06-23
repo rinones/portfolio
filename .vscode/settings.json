@@ -19,13 +19,13 @@
     ],
     
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/.gitattributes": true,
-        ".gitattributes": true
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/.DS_Store": false,
+        "**/Thumbs.db": false,
+        "**/.gitattributes": false,
+        ".gitattributes": false
     },
     "explorerExclude.backup": {}
 }
