@@ -1,24 +1,8 @@
-// Variables
-$primary-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-$font-size-base: 11px;
-$font-size-name: 20px;
-$font-size-section: 13px;
-$font-size-job-title: 12px;
-$font-size-education-title: 12px;
-$font-size-company: 11px;
-$font-size-university: 11px;
-$line-height: 1.4;
-$margin-section: 30px;
-$margin-job: 10px;
-$margin-education: 10px;
-$margin-list: 6px;
-$margin-languages: 6px;
-$text-color: #2c3e50;
-$text-color-light: #5d6d7e;
-$accent-color: #34495e;
-$border-color: #f1edec;
-$background-color: #fff;
-$shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
+@import 'variables';
+@import 'mixins';
+@import 'experience';
+@import 'education';
+@import 'languajes';
 
 // Reset básico
 * {
@@ -85,207 +69,7 @@ body {
       margin-bottom: $margin-section;
 
       .section-title {
-        font-size: $font-size-section;
-        font-weight: 600;
-        margin-bottom: 12px;
-        text-align: left;
-        color: $accent-color;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 30px;
-          height: 2px;
-          background-color: $accent-color;
-        }
-      }
-    }
-
-    .experience-section {
-      .job {
-        margin-bottom: $margin-job;
-        padding: 12px 0;
-        border-bottom: 1px solid rgba($border-color, 1);
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        .job-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 4px;
-
-          .job-title {
-            font-size: $font-size-job-title;
-            font-weight: 600;
-            flex: 1;
-            margin-right: 10px;
-            color: $accent-color;
-          }
-
-          .job-period,
-          .job-duration {
-            font-size: $font-size-job-title;
-            font-weight: 500;
-            white-space: nowrap;
-            color: $text-color-light;
-            background-color: rgba($border-color, 0.3);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 10px;
-          }
-        }
-
-        .company-location {
-          font-size: $font-size-company;
-          margin-bottom: 8px;
-          color: $text-color-light;
-          font-style: italic;
-
-          .company {
-            font-weight: 500;
-            color: $text-color;
-          }
-
-          .separator {
-            margin: 0 6px;
-          }
-
-          .location {
-            font-weight: normal;
-          }
-        }
-
-        .job-responsibilities, .job-description {
-          list-style: none;
-          margin-left: 0;
-          margin-bottom: $margin-list;
-
-          li {
-            font-size: $font-size-base;
-            margin-bottom: 4px;
-            text-align: justify;
-            padding-left: 20px;
-            position: relative;
-
-            &::before {
-              content: "▸";
-              position: absolute;
-              left: 0;
-              color: $accent-color;
-              font-weight: bold;
-            }
-          }
-        }
-
-        .job-description {
-          text-align: justify;
-
-          .job-float-img-container {
-            cursor: pointer;
-          }
-        }
-      }
-    }
-
-    .education-section {
-      .education {
-        margin-bottom: $margin-education;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba($border-color, 1);
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        .education-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 4px;
-
-          .education-title {
-            font-size: $font-size-education-title;
-            font-weight: 600;
-            flex: 1;
-            margin-right: 10px;
-            color: $accent-color;
-          }
-
-          .education-period,
-          .education-duration {
-            font-size: $font-size-education-title;
-            font-weight: 500;
-            white-space: nowrap;
-            color: $text-color-light;
-            background-color: rgba($border-color, 0.3);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 10px;
-          }
-        }
-
-        .university-location {
-          font-size: $font-size-university;
-          margin-bottom: 8px;
-          color: $text-color-light;
-          font-style: italic;
-
-          .university {
-            font-weight: 500;
-            color: $text-color;
-          }
-
-          .separator {
-            margin: 0 6px;
-          }
-
-          .location {
-            font-weight: normal;
-          }
-        }
-
-        .education-responsibilities {
-          list-style: none;
-          margin-left: 0;
-          margin-bottom: $margin-list;
-
-          li {
-            font-size: $font-size-base;
-            margin-bottom: 4px;
-            text-align: justify;
-            padding-left: 20px;
-            position: relative;
-
-            &::before {
-              content: "▸";
-              position: absolute;
-              left: 0;
-              color: $accent-color;
-              font-weight: bold;
-            }
-          }
-        }
-      }
-    }
-
-    .languages-section {
-      .languages-list {
-        font-size: $font-size-base;
-        font-weight: 500;
-        color: $text-color-light;
-        background-color: rgba($border-color, 0.3);
-        padding: 8px 16px;
-        border-radius: 20px;
-        display: inline-block;
-        margin-top: $margin-languages;
+        @include section-title;
       }
     }
   }
@@ -329,8 +113,7 @@ body {
 
       .experience-section,
       .languages-section,
-      .education-section,
-      .skills-section {
+      .education-section {
         margin-bottom: 3mm !important;
 
         .section-title {
@@ -352,8 +135,7 @@ body {
     .job,
     .experience-section,
     .education-section,
-    .languages-section,
-    .skills-section {
+    .languages-section {
       page-break-inside: avoid;
       break-inside: avoid;
     }

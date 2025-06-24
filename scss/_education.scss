@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+
+.education-section {
+    .section-title {
+        @include section-title;
+    }
+
+    .education {
+
+        margin-bottom: $margin-education;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba($border-color, 1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .education-responsibilities,
+        .education-description {
+            @include responsibility-list;
+        }
+
+        .education-header {
+
+            @include block-header;
+
+            .education-title {
+                @include block-title;
+            }
+
+            .education-period,
+            .education-duration {
+                @include pill;
+            }
+        }
+
+        .university-location {
+            @include block-location;
+        }
+    }
+}

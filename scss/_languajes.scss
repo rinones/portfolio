@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+
+.languages-section {
+    .section-title {
+        @include section-title;
+    }
+
+    .languages-list {
+        @include pill($bg: rgba($border-color, 0.3), $color: $text-color-light);
+        padding: 8px 16px;
+        border-radius: 20px;
+        margin-top: $margin-languages;
+        font-size: $font-size-base;
+    }
+}
+
+.languages-section {
+    .languages-list {
+        font-size: $font-size-base;
+        font-weight: 500;
+        color: $text-color-light;
+        background-color: rgba($border-color, 0.3);
+        padding: 8px 16px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: $margin-languages;
+    }
+}
