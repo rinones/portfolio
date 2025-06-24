@@ -47,8 +47,8 @@
 
 // Estilo tipo “píldora”
 @mixin pill($bg: rgba($border-color, 0.3), $color: $text-color-light) {
-  color: $color;
-  background-color: $bg;
+  color: $text-color-light;;
+  background-color: rgba($border-color, 0.3);
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 10px;
