@@ -1,8 +1,8 @@
-@import 'variables';
-@import 'mixins';
-@import 'experience';
-@import 'education';
-@import 'languages';
+@use './utils/variables' as *;
+@use './utils/mixins' as *;
+@use './sections/experience' as *;
+@use './sections/education' as *;
+@use './sections/languages' as *;
 
 // Reset básico
 * {
@@ -16,7 +16,7 @@ body {
   font-size: $font-size-base;
   line-height: $line-height;
   color: $text-color;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa;  
   margin: 0;
   padding: 30px 20px;
 }
@@ -227,7 +227,7 @@ body {
     display: inline-block;
   }
 
-  .job-float-img-container {
+  .job-float-img-wrapper {
     position: relative;
     display: inline-block; // Solo ocupa el tamaño de la imagen
   }
@@ -235,9 +235,12 @@ body {
   // Regla global para todas las imágenes flotantes
   .job-float-img {
     float: right;
-    width: 180px;
-    height: 101px;
-    object-fit: cover;
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    max-height: 35px;
+    padding: 5px;
+    object-fit: contain;
     margin: 0 0 12px 18px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(44,62,80,0.10);
@@ -246,7 +249,6 @@ body {
   }
 
   .cv-video {
-    float: right;
     margin: 0 0 12px 18px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(44,62,80,0.10);

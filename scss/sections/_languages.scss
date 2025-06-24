@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .languages-section {
     .section-title {

@@ -1,4 +1,4 @@
-@import "variables";
+@use './variables' as *;
 
 // Justify lists with custom bullet
 @mixin responsibility-list {

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .experience-section .section-title {
   font-size: 13px;
   font-weight: 600;
@@ -216,17 +215,6 @@
   font-size: 11px;
 }
 
-.languages-section .languages-list {
-  font-size: 11px;
-  font-weight: 500;
-  color: #5d6d7e;
-  background-color: rgba(241, 237, 236, 0.3);
-  padding: 8px 16px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 6px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -427,19 +415,30 @@ body {
   position: relative;
   display: inline-block;
 }
-.cv-container .job-float-img-container {
+.cv-container .job-float-img-wrapper {
   position: relative;
   display: inline-block;
 }
 .cv-container .job-float-img {
   float: right;
-  width: 180px;
-  height: 101px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  max-height: 35px;
+  padding: 5px;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 0 0 12px 18px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
   display: block;
   cursor: pointer;
+}
+.cv-container .cv-video {
+  margin: 0 0 12px 18px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  width: 300px; /* Cambia aquí el tamaño del reproductor */
+  height: 124px; /* Cambia aquí el tamaño del reproductor */
+  max-width: 100%;
 }
