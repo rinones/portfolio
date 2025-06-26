@@ -1,0 +1,107 @@
+  // Media queries para responsive
+  @media print {
+      @page {
+          size: A4;
+          margin: 8mm 7mm 8mm 7mm; // Arriba y abajo más amplios, laterales ajustados
+      }
+
+      html,
+      body {
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          padding: 0;
+          background: white;
+      }
+
+      body {
+          font-size: 9px;
+      }
+
+      .cv-container {
+          max-width: 196mm;
+          padding: 7mm 3mm 7mm 3mm; // Arriba y abajo más amplios, laterales ajustados
+          margin: 0 auto;
+          box-shadow: none;
+          border-radius: 0;
+          background: white;
+      }
+
+      .cv-header {
+          margin-bottom: 4mm !important;
+          padding-bottom: 2mm !important;
+          border-bottom-width: 0.3mm !important;
+      }
+
+      .cv-content {
+
+          .experience-section,
+          .languages-section,
+          .education-section {
+              margin-bottom: 3mm !important;
+
+              .section-title {
+                  margin-bottom: 1.5mm !important;
+              }
+          }
+
+          .job {
+              margin-bottom: 1.5mm !important;
+              padding: 1.5mm 0 !important;
+          }
+
+          .languages-section .languages-list {
+              margin-top: 1mm !important;
+              padding: 1mm 1.5mm !important;
+          }
+      }
+
+      .job,
+      .experience-section,
+      .education-section,
+      .languages-section {
+          page-break-inside: avoid;
+          break-inside: avoid;
+      }
+
+      .accordion {
+          background-color: lightskyblue;
+
+          .accordion-main-block {
+              background-color: red;
+          }
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+      body {
+          padding: 10px;
+      }
+
+      .cv-container {
+          .cv-header {
+              .name {
+                  font-size: 14px;
+              }
+
+              .contact-info {
+                  font-size: 10px;
+                  line-height: 1.4;
+              }
+          }
+
+          .cv-content {
+              .job {
+                  .job-header {
+                      flex-direction: column;
+                      align-items: flex-start;
+
+                      .job-title {
+                          margin-right: 0;
+                          margin-bottom: 2px;
+                      }
+                  }
+              }
+          }
+      }
+  }

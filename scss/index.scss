@@ -1,8 +1,10 @@
 @use './utils/variables' as *;
 @use './utils/mixins' as *;
+@use './utils/media' as *;
 @use './sections/experience' as *;
 @use './sections/education' as *;
 @use './sections/languages' as *;
+@use './sections/skills' as *;
 
 // Reset básico
 * {
@@ -30,155 +32,109 @@ body {
   padding: 40px;
 
   .cv-header {
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding-bottom: 20px;
     border-bottom: 2px solid $border-color;
 
-    .name {
-      font-size: $font-size-name;
-      font-weight: 600;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-      color: $accent-color;
+    .header-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
     }
 
-    .contact-info {
-      font-size: $font-size-base;
-      color: $text-color-light;
+    .profile-picture-wrapper {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      .separator {
-        margin: 0 8px;
-        color: $border-color;
+      .profile-img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+        border: 2px solid $border-color;
+      }
+    }
+
+    .personal-info {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+
+      .name-wrapper {
+        margin-bottom: 6px;
       }
 
-      .phone,
-      .email,
-      .location {
-        font-weight: normal;
+      .name {
+        font-size: $font-size-name;
+        font-weight: 600;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
         color: $accent-color;
       }
-    }
-  }
 
-  .cv-content {
-    .experience-section,
-    .languages-section,
-    .education-section,
-    .skills-section {
-      margin-bottom: $margin-section;
+      .contact-info {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        font-size: $font-size-base;
+        color: $text-color-light;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
 
-      .section-title {
-        @include section-title;
-      }
-    }
-  }
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
 
-  // Media queries para responsive
-  @media print {
-    @page {
-      size: A4;
-      margin: 8mm 7mm 8mm 7mm; // Arriba y abajo más amplios, laterales ajustados
-    }
-
-    html,
-    body {
-      width: 210mm;
-      height: 297mm;
-      margin: 0;
-      padding: 0;
-      background: white;
-    }
-
-    body {
-      font-size: 9px;
-    }
-
-    .cv-container {
-      max-width: 196mm;
-      padding: 7mm 3mm 7mm 3mm; // Arriba y abajo más amplios, laterales ajustados
-      margin: 0 auto;
-      box-shadow: none;
-      border-radius: 0;
-      background: white;
-    }
-
-    .cv-header {
-      margin-bottom: 4mm !important;
-      padding-bottom: 2mm !important;
-      border-bottom-width: 0.3mm !important;
-    }
-
-    .cv-content {
-
-      .experience-section,
-      .languages-section,
-      .education-section {
-        margin-bottom: 3mm !important;
-
-        .section-title {
-          margin-bottom: 1.5mm !important;
-        }
-      }
-
-      .job {
-        margin-bottom: 1.5mm !important;
-        padding: 1.5mm 0 !important;
-      }
-
-      .languages-section .languages-list {
-        margin-top: 1mm !important;
-        padding: 1mm 1.5mm !important;
-      }
-    }
-
-    .job,
-    .experience-section,
-    .education-section,
-    .languages-section {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-
-    .accordion {
-      background-color: lightskyblue;
-
-      .accordion-main-block {
-        background-color: red;
-      }
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    body {
-      padding: 10px;
-    }
-
-    .cv-container {
-      .cv-header {
-        .name {
-          font-size: 14px;
-        }
-
-        .contact-info {
-          font-size: 10px;
-          line-height: 1.4;
-        }
-      }
-
-      .cv-content {
-        .job {
-          .job-header {
-            flex-direction: column;
-            align-items: flex-start;
-
-            .job-title {
-              margin-right: 0;
-              margin-bottom: 2px;
-            }
+          .icon {
+            width: 1em;
+            height: 1em;
+            min-width: 1em;
+            min-height: 1em;
+            vertical-align: middle;
+            margin-right: 6px;
+            color: inherit;
+            display: inline-block;
           }
         }
       }
+
+      @media (max-width: 700px) {
+        align-items: center;
+        text-align: center;
+        .contact-info {
+          flex-direction: column;
+          gap: 8px;
+          align-items: center;
+          padding: 0;
+          background: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .education-section,
+  .skills-section {
+    margin-bottom: $margin-section;
+
+    .section-title {
+      @include section-title;
     }
   }
 
@@ -248,12 +204,13 @@ body {
     cursor: pointer;
   }
 
-  .cv-video {
-    margin: 0 0 12px 18px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
-    width: 300px;   /* Cambia aquí el tamaño del reproductor */
-    height: 124px;  /* Cambia aquí el tamaño del reproductor */
-    max-width: 100%;
-  }
+  
+  // .cv-video {
+  //   margin: 0 0 12px 18px;
+  //   border-radius: 6px;
+  //   box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  //   width: 300px;   /* Cambia aquí el tamaño del reproductor */
+  //   height: 124px;  /* Cambia aquí el tamaño del reproductor */
+  //   max-width: 100%;
+  // }
 }
