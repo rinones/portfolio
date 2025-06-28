@@ -4,13 +4,13 @@
 @mixin responsibility-list {
   list-style: none;
   margin-left: 0;
-  margin-bottom: $margin-list;
+  margin-bottom: 0.55rem; // Converted from $margin-list (6px) to rem
 
   li {
-    font-size: $font-size-base;
-    margin-bottom: 4px;
+    font-size: 1rem; // Using rem instead of $font-size-base for consistency
+    margin-bottom: 0.35rem; // Converted from 4px to rem
     text-align: justify;
-    padding-left: 20px;
+    padding-left: 1.8rem; // Converted from 20px to rem
     position: relative;
 
     &::before {
@@ -25,22 +25,22 @@
 
 // Título de sección con subrayado
 @mixin section-title {
-  font-size: $font-size-section;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 1.6rem; // Increased from 13px to ~18px equivalent for better hierarchy
+  font-weight: 700; // Increased from 600 for better visual weight
+  margin-bottom: 1.1rem; // Converted from 12px to rem
   text-align: left;
   color: $accent-color;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em; // Improved letter-spacing using em for better scaling
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: -0.35rem; // Converted from -4px to rem
     left: 0;
-    width: 30px;
-    height: 2px;
+    width: 2.7rem; // Converted from 30px to rem  
+    height: 0.18rem; // Converted from 2px to rem
     background-color: $accent-color;
   }
 }
@@ -49,9 +49,9 @@
 @mixin pill($bg: rgba($border-color, 0.3), $color: $text-color-light) {
   color: $text-color-light;;
   background-color: rgba($border-color, 0.3);
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 10px;
+  padding: 0.18rem 0.7rem; // Converted from 2px 8px to rem
+  border-radius: 1.1rem; // Converted from 12px to rem
+  font-size: 0.9rem; // Converted from 10px to rem
   font-weight: 500;
   white-space: nowrap;
   display: inline-block;
@@ -61,20 +61,21 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 4px;
+  margin-bottom: 0.35rem; // Converted from 4px to rem
 }
 
 @mixin block-title {
-  font-size: $font-size-block-title;
-    font-weight: 600;
-    flex: 1;
-    margin-right: 10px;
-    color: $accent-color;
+  font-size: 1.35rem; // Increased from 12px to ~15px equivalent for better hierarchy
+  font-weight: 700; // Increased from 600 for better visual weight
+  flex: 1;
+  margin-right: 0.9rem; // Converted from 10px to rem
+  color: $accent-color;
+  letter-spacing: 0.02em; // Added subtle letter-spacing for better readability
 }
 
 @mixin block-location {
-  font-size: $font-size-institution;
-  margin-bottom: 8px;
+  font-size: 1rem; // Using rem instead of $font-size-institution for consistency
+  margin-bottom: 0.7rem; // Converted from 8px to rem
   color: $text-color-light;
   font-style: italic;
 
@@ -85,7 +86,7 @@
   }
 
   .separator {
-    margin: 0 6px;
+    margin: 0 0.55rem; // Converted from 6px to rem
   }
 
   .location {
