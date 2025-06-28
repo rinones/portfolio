@@ -1,17 +1,17 @@
 // Variables
 $primary-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-$font-size-base: 11px;
-$font-size-name: 25px;
-$font-size-section: 13px;
-$font-size-block-title: 12px;
-$font-size-institution: 11px;
+$font-size-base: 1rem; // 16px
+$font-size-name: 1.5625rem; // 25px
+$font-size-section: 0.8125rem; // 13px
+$font-size-block-title: 0.75rem; // 12px
+$font-size-institution: 1rem; // 11px
 $line-height: 1.4;
-$margin-section: 25px;
-$margin-job: 10px;
-$margin-education: 10px;
-$margin-list: 6px;
-$margin-languages: 6px;
-$margin-lastchild: 5px;
+$margin-section: 1.5625rem; // 25px
+$margin-job: 0.625rem; // 10px
+$margin-education: 0.625rem; // 10px
+$margin-list: 0.375rem; // 6px
+$margin-languages: 0.375rem; // 6px
+$margin-lastchild: 0.3125rem; // 5px
 $text-color: #2c3e50;
 $text-color-light: #5d6d7e;
 $accent-color: #34495e;
