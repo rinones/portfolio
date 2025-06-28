@@ -1,0 +1,16 @@
+@use 'src/styles/scss/utils/variables' as *;
+@use 'src/styles/scss/utils/mixins' as *;
+
+.languages-section {
+    .section-title {
+        @include section-title;
+    }
+
+    .languages-list {
+        @include pill($bg: rgba($border-color, 0.3), $color: $text-color-light);
+        padding: 8px 16px;
+        border-radius: 20px;
+        margin-top: $margin-languages;
+        font-size: $font-size-base;
+    }
+}

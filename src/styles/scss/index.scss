@@ -1,0 +1,219 @@
+@use 'src/styles/scss/utils/variables' as *;
+@use 'src/styles/scss/utils/mixins' as *;
+@use 'src/styles/scss/utils/media' as *;
+@use 'src/styles/scss/sections/experience' as *;
+@use 'src/styles/scss/sections/education' as *;
+@use 'src/styles/scss/sections/languages' as *;
+@use 'src/styles/scss/sections/skills' as *;
+
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  line-height: $line-height;
+  color: $text-color;
+  background-color: #f8f9fa;  
+  margin: 0;
+  padding: 30px 20px;
+}
+
+.cv-container {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: white;
+  box-shadow: $shadow-subtle;
+  border-radius: 4px;
+  padding: 40px;
+
+  .cv-header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $border-color;
+
+    .header-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 0 0 0 20px;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+    }
+
+    .profile-picture-wrapper {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .profile-img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+        border: 2px solid $border-color;
+      }
+    }
+
+    .personal-info {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+
+      .name-wrapper {
+        // margin-top: 6px;
+        // margin-bottom: 6px;
+        padding: 20px 0 0 0;
+      }
+
+      .name {
+        font-size: $font-size-name;
+        font-weight: 600;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
+        color: $accent-color;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        font-size: $font-size-base;
+        color: $text-color-light;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          .icon {
+            width: 1em;
+            height: 1em;
+            min-width: 1em;
+            min-height: 1em;
+            vertical-align: middle;
+            margin-right: 6px;
+            color: inherit;
+            display: inline-block;
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        align-items: center;
+        text-align: center;
+        .contact-info {
+          flex-direction: column;
+          gap: 8px;
+          align-items: center;
+          padding: 0;
+          background: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .education-section,
+  .skills-section {
+    margin-bottom: $margin-section;
+
+    .section-title {
+      @include section-title;
+    }
+  }
+
+  // Estilos específicos para mantener la consistencia del diseño original
+  .cv-container {
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    // Ajustes para texto justificado en listas
+    .job-responsibilities li,
+    .reports-list li,
+    .inspections-list li {
+      hyphens: auto;
+      word-wrap: break-word;
+    }
+  }
+
+  // Estilos generales para el acordeón
+  .accordion {
+    border-radius: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 16px 0 rgba(44, 62, 80, 0.10), 4px 0 12px -4px rgba(44, 62, 80, 0.08); // Sombra derecha e inferior
+
+    .accordion-main-block {
+      cursor: pointer;
+      padding: 8px 12px;
+      transition: background 0.2s;
+      border-radius: 4px 4px 0 0;
+      &:hover {
+        background: #eaecef;
+      }
+    }
+
+    .accordion-content {
+      padding: 10px 12px;
+      // background: #fff;
+      border-radius: 0 0 4px 4px;
+      border-top: 1px solid $border-color;
+      display: none; // Cambia a block con JS si es necesario
+    }
+  }
+
+  .youtube-iframe-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .job-float-img-wrapper {
+    position: relative;
+    display: inline-block; // Solo ocupa el tamaño de la imagen
+  }
+
+  // Regla global para todas las imágenes flotantes
+  .job-float-img {
+    float: right;
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    max-height: 35px;
+    padding: 5px;
+    object-fit: contain;
+    margin: 0 0 12px 18px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    display: block;
+    cursor: pointer;
+  }
+
+  
+  // .cv-video {
+  //   margin: 0 0 12px 18px;
+  //   border-radius: 6px;
+  //   box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  //   width: 300px;   /* Cambia aquí el tamaño del reproductor */
+  //   height: 124px;  /* Cambia aquí el tamaño del reproductor */
+  //   max-width: 100%;
+  // }
+}

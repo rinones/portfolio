@@ -7,15 +7,9 @@
         {
           "format": "expanded",
           "extensionName": ".css",
-          "savePath": "/css",
+          "savePath": "/src/styles/css",
           "generateMap": false
         },
-        // {
-        //     "format": "compressed",
-        //     "extensionName": "-min.css",
-        //     "savePath": "/css",
-        //     "generateMap": false
-        // }
     ],
     
     "files.exclude": {

@@ -1,0 +1,94 @@
+@use 'src/styles/scss/variables' as *;
+
+// Justify lists with custom bullet
+@mixin responsibility-list {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: $margin-list;
+
+  li {
+    font-size: $font-size-base;
+    margin-bottom: 4px;
+    text-align: justify;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: $accent-color;
+      font-weight: bold;
+    }
+  }
+}
+
+// Título de sección con subrayado
+@mixin section-title {
+  font-size: $font-size-section;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left;
+  color: $accent-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}
+
+// Estilo tipo “píldora”
+@mixin pill($bg: rgba($border-color, 0.3), $color: $text-color-light) {
+  color: $text-color-light;;
+  background-color: rgba($border-color, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@mixin block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+@mixin block-title {
+  font-size: $font-size-block-title;
+    font-weight: 600;
+    flex: 1;
+    margin-right: 10px;
+    color: $accent-color;
+}
+
+@mixin block-location {
+  font-size: $font-size-institution;
+  margin-bottom: 8px;
+  color: $text-color-light;
+  font-style: italic;
+
+  .company,
+  .university {
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  .separator {
+    margin: 0 6px;
+  }
+
+  .location {
+    font-weight: normal;
+  }
+}
