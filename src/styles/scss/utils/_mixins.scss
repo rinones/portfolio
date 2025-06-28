@@ -75,7 +75,7 @@
 
 @mixin block-location {
   font-size: $font-size-institution;
-  margin-bottom: 0.5rem; // 8px
+  margin-bottom: 0.5rem; 
   color: $text-color-light;
   font-style: italic;
 
@@ -86,7 +86,7 @@
   }
 
   .separator {
-    margin: 0 0.375rem; // 6px
+    margin: 0 0.375rem;
   }
 
   .location {

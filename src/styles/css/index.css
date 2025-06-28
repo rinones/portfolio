@@ -21,7 +21,7 @@
 .experience-section .job {
   margin-bottom: 0.625rem;
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #f1edec;
+  border-bottom: 0.1rem solid #f1edec;
 }
 .experience-section .job:last-child {
   border-bottom: none;
@@ -112,8 +112,8 @@
 }
 .education-section .education {
   margin-bottom: 0.625rem;
-  padding: 8px 0;
-  border-bottom: 1px solid #f1edec;
+  padding: 0.75rem 0;
+  border-bottom: 0.1rem solid #f1edec;
 }
 .education-section .education:last-child {
   border-bottom: none;
@@ -211,8 +211,8 @@
   font-weight: 500;
   white-space: nowrap;
   display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 0.75rem 1.45rem;
+  border-radius: 1.8rem;
   margin-top: 0.375rem;
   font-size: 1rem;
 }
@@ -245,8 +245,8 @@
   font-weight: 500;
   white-space: nowrap;
   display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 0.75rem 1.45rem;
+  border-radius: 1.8rem;
   margin-top: 0.375rem;
   font-size: 1rem;
 }
@@ -264,35 +264,35 @@ body {
   color: #2c3e50;
   background-color: #f8f9fa;
   margin: 0;
-  padding: 30px 20px;
+  padding: 1.3rem 1.8rem;
 }
 
 .cv-container {
-  max-width: 210mm;
+  max-width: 90%;
   margin: 0 auto;
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  padding: 40px;
+  border-radius: 0.35rem;
+  padding: 1.35rem 3.65rem;
 }
 .cv-container .cv-header {
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #f1edec;
+  margin-bottom: 1.35rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 0.2rem solid #f1edec;
 }
 .cv-container .cv-header .header-flex {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 2.75rem;
   flex-wrap: wrap;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 1.8rem;
 }
 @media (max-width: 700px) {
   .cv-container .cv-header .header-flex {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 2.2rem;
   }
 }
 .cv-container .cv-header .profile-picture-wrapper {
@@ -302,36 +302,34 @@ body {
   justify-content: center;
 }
 .cv-container .cv-header .profile-picture-wrapper .profile-img {
-  width: 130px;
-  height: 130px;
+  width: 10rem;
+  height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
-  border: 2px solid #f1edec;
+  box-shadow: 0 0.2rem 0.75rem rgba(44, 62, 80, 0.1);
+  border: 0.2rem solid #f1edec;
 }
 .cv-container .cv-header .personal-info {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 18px;
-}
-.cv-container .cv-header .personal-info .name-wrapper {
-  padding: 20px 0 0 0;
+  gap: 0.15rem;
 }
 .cv-container .cv-header .personal-info .name {
-  font-size: 1.5625rem;
+  font-size: 3em;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
   margin-bottom: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
   color: #34495e;
 }
 .cv-container .cv-header .personal-info .contact-info {
   display: flex;
-  gap: 14px;
+  gap: 1.21rem;
   flex-wrap: wrap;
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: #5d6d7e;
   background: none;
   border-radius: 0;
@@ -341,7 +339,7 @@ body {
 .cv-container .cv-header .personal-info .contact-info .contact-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.5rem;
 }
 .cv-container .cv-header .personal-info .contact-info .contact-item .icon {
   width: 1em;
@@ -349,7 +347,6 @@ body {
   min-width: 1em;
   min-height: 1em;
   vertical-align: middle;
-  margin-right: 6px;
   color: inherit;
   display: inline-block;
 }
@@ -360,7 +357,7 @@ body {
   }
   .cv-container .cv-header .personal-info .contact-info {
     flex-direction: column;
-    gap: 8px;
+    gap: 0.75rem;
     align-items: center;
     padding: 0;
     background: none;
@@ -403,23 +400,23 @@ body {
   word-wrap: break-word;
 }
 .cv-container .accordion {
-  border-radius: 4px;
-  margin-bottom: 8px;
-  box-shadow: 0 4px 16px 0 rgba(44, 62, 80, 0.1), 4px 0 12px -4px rgba(44, 62, 80, 0.08);
+  border-radius: 0.35rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0.35rem 1.45rem 0 rgba(44, 62, 80, 0.1), 0.35rem 0 1.1rem -0.35rem rgba(44, 62, 80, 0.08);
 }
 .cv-container .accordion .accordion-main-block {
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 0.75rem 1.1rem;
   transition: background 0.2s;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.35rem 0.35rem 0 0;
 }
 .cv-container .accordion .accordion-main-block:hover {
   background: #eaecef;
 }
 .cv-container .accordion .accordion-content {
-  padding: 10px 12px;
-  border-radius: 0 0 4px 4px;
-  border-top: 1px solid #f1edec;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 0 0.35rem 0.35rem;
+  border-top: 0.1rem solid #f1edec;
   display: none;
 }
 .cv-container .youtube-iframe-wrapper {
@@ -433,15 +430,15 @@ body {
 .cv-container .job-float-img {
   float: right;
   width: auto;
-  max-width: 150px;
+  max-width: 13.65rem;
   height: auto;
-  max-height: 35px;
-  padding: 5px;
+  max-height: 3.2rem;
+  padding: 0.45rem;
   -o-object-fit: contain;
      object-fit: contain;
-  margin: 0 0 12px 18px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  margin: 0 0 1.1rem 1.65rem;
+  border-radius: 0.55rem;
+  box-shadow: 0 0.2rem 0.75rem rgba(44, 62, 80, 0.1);
   display: block;
   cursor: pointer;
 }
