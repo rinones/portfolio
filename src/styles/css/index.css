@@ -51,8 +51,7 @@
   .education-section,
   .languages-section {
     page-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-         break-inside: avoid;
+    break-inside: avoid;
   }
   .accordion {
     background-color: lightskyblue;
@@ -386,8 +385,7 @@ body {
 .cv-container .cv-header .profile-picture-wrapper .profile-img {
   width: 130px;
   height: 130px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
   border: 2px solid #f1edec;
@@ -480,8 +478,7 @@ body {
 .cv-container .cv-container .job-responsibilities li,
 .cv-container .cv-container .reports-list li,
 .cv-container .cv-container .inspections-list li {
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
   word-wrap: break-word;
 }
 .cv-container .accordion {
@@ -519,11 +516,12 @@ body {
   height: auto;
   max-height: 35px;
   padding: 5px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin: 0 0 12px 18px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
   display: block;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=index.css.map */

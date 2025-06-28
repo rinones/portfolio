@@ -1,10 +1,10 @@
-@use 'src/styles/scss/utils/variables' as *;
-@use 'src/styles/scss/utils/mixins' as *;
-@use 'src/styles/scss/utils/media' as *;
-@use 'src/styles/scss/sections/experience' as *;
-@use 'src/styles/scss/sections/education' as *;
-@use 'src/styles/scss/sections/languages' as *;
-@use 'src/styles/scss/sections/skills' as *;
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+@use 'utils/media' as *;
+@use 'sections/experience' as *;
+@use 'sections/education' as *;
+@use 'sections/languages' as *;
+@use 'sections/skills' as *;
 
 // Reset básico
 * {
