@@ -27,6 +27,16 @@
   border-bottom: none;
   margin-bottom: 0.3125rem;
 }
+@media print {
+  .experience-section .job p {
+    display: none;
+  }
+}
+@media print {
+  .experience-section .job {
+    padding: 0.35rem 0;
+  }
+}
 .experience-section .job .job-responsibilities,
 .experience-section .job .job-description {
   list-style: none;
@@ -97,6 +107,9 @@
   font-weight: normal;
 }
 
+.education-section {
+  margin-top: 2rem;
+}
 .education-section .section-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -124,6 +137,16 @@
 .education-section .education:last-child {
   border-bottom: none;
   margin-bottom: 0.3125rem;
+}
+@media print {
+  .education-section .education p {
+    display: none;
+  }
+}
+@media print {
+  .education-section .education {
+    padding: 0.45rem 0;
+  }
 }
 .education-section .education .education-responsibilities,
 .education-section .education .education-description {
@@ -278,6 +301,11 @@ body {
   margin: 0;
   padding: 1.3rem 1.8rem;
 }
+@media print {
+  body {
+    padding: 0;
+  }
+}
 
 .cv-container {
   max-width: 85%;
@@ -286,6 +314,20 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 0.35rem;
   padding: 1.35rem 3.65rem;
+}
+@media print {
+  .cv-container .job,
+  .cv-container .education {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+@media print {
+  .cv-container {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 .cv-container .cv-header {
   margin-bottom: 1.35rem;
@@ -333,6 +375,14 @@ body {
 .cv-container .cv-header .personal-info .profile-summary {
   text-align: justify;
   padding: 0rem 1.5rem 0.5rem 0.5rem;
+}
+.cv-container .cv-header .personal-info .profile-portfolio {
+  display: none;
+}
+@media print {
+  .cv-container .cv-header .personal-info .profile-portfolio {
+    display: block;
+  }
 }
 .cv-container .cv-header .personal-info .profile-portfolio, .cv-container .cv-header .personal-info .contact-info {
   padding: 0rem 0rem 0.5rem 0.5rem;
@@ -437,6 +487,14 @@ body {
   border-radius: 0 0 0.35rem 0.35rem;
   border-top: 0.1rem solid #f1edec;
   display: none;
+}
+@media print {
+  .cv-container .accordion .accordion-content {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
 }
 .cv-container .job-float-img-wrapper {
   position: relative;

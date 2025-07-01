@@ -2,6 +2,8 @@
 @use '../utils/mixins' as *;
 
 .education-section {
+
+    margin-top: 2rem;
     .section-title {
         @include section-title;
     }
@@ -9,6 +11,11 @@
     .education {
 
         @include block-body;
+
+        @media print {
+            padding: 0.45rem 0;
+        }
+        
 
         .education-responsibilities,
         .education-description {

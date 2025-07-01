@@ -75,6 +75,7 @@
   flex: 1;
   margin-right: 0.625rem; // 10px
   color: $accent-color;
+  
 }
 
 @mixin block-location {
@@ -106,5 +107,11 @@
     &:last-child {
       border-bottom: none;
       margin-bottom: $margin-lastchild;
+    }
+  
+    p {
+      @media print {
+          display: none;
+      }
     }
 }

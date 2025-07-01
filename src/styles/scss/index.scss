@@ -5,6 +5,7 @@
 @use './sections/languages' as *;
 @use './sections/skills' as *;
 
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,10 @@ body {
   background-color: #f8f9fa;
   margin: 0;
   padding: 1.3rem 1.8rem;
+
+  @media print {
+    padding: 0;
+  }
 }
 
 .cv-container {
@@ -28,6 +33,20 @@ body {
   box-shadow: $shadow-subtle;
   border-radius: 0.35rem;
   padding: 1.35rem 3.65rem;
+
+    .job,
+    .education {
+      @media print {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+
+  @media print {
+    max-width: 100%;
+    margin: 0;
+  }
 
   .cv-header {
     margin-bottom: 1.35rem;
@@ -76,6 +95,13 @@ body {
       .profile-summary {
         text-align: justify;
         padding: 0rem 1.5rem 0.5rem 0.5rem;
+      }
+
+      .profile-portfolio {
+        display: none;
+        @media print {
+          display: block;
+        }
       }
 
       .profile-portfolio, .contact-info {
@@ -181,6 +207,13 @@ body {
       border-radius: 0 0 0.35rem 0.35rem;
       border-top: 0.1rem solid $border-color;
       display: none; // Cambia a block con JS si es necesario
+
+      @media print {
+        display: block !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
     }
   }
 
