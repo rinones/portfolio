@@ -8,9 +8,9 @@
 
   li {
     font-size: $font-size-base;
-    margin-bottom: 0.25rem; // 4px -> 0.25rem
+    margin-bottom: 0.25rem;
     text-align: justify;
-    padding-left: 1.25rem; // 20px -> 1.25rem
+    padding: 0rem 0.9rem 0rem 1.25rem;
     position: relative;
 
     &::before {
@@ -21,9 +21,13 @@
       font-weight: bold;
     }
   }
+
+  p {
+    padding: 0rem 0.9rem 0rem 0.5rem;
+    text-align: justify;
+  }
 }
 
-// Título de sección con subrayado y mayor jerarquía visual
 @mixin section-title {
   font-size: 1.25rem; // 20px, más grande y destacado
   font-weight: 700;
@@ -92,4 +96,15 @@
   .location {
     font-weight: normal;
   }
+}
+
+@mixin block-body {
+  margin-bottom: $margin-education;
+    padding: 0.75rem 0;
+    border-bottom: 0.1rem solid rgba($border-color, 1);
+  
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: $margin-lastchild;
+    }
 }

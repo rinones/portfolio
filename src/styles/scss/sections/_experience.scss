@@ -9,14 +9,7 @@
 
     .job {
 
-        margin-bottom: $margin-job;
-        padding: 0.75rem 0;
-        border-bottom: 0.1rem solid rgba($border-color, 1);
-
-        &:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
+        @include block-body;
 
         .job-responsibilities,
         .job-description {
@@ -34,6 +27,7 @@
             .job-period,
             .job-duration {
                 @include pill;
+                font-size: $font-size-job-duration;
             }
         }
 

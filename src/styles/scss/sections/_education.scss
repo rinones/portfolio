@@ -8,14 +8,7 @@
 
     .education {
 
-        margin-bottom: $margin-education;
-        padding: 0.75rem 0;
-        border-bottom: 0.1rem solid rgba($border-color, 1);
-
-        &:last-child {
-            border-bottom: none;
-            margin-bottom: $margin-lastchild;
-        }
+        @include block-body;
 
         .education-responsibilities,
         .education-description {
@@ -33,6 +26,7 @@
             .education-period,
             .education-duration {
                 @include pill;
+                font-size: $font-size-education-period;
             }
         }
 
