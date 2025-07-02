@@ -1,14 +1,12 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .experience-section {
-
     .section-title {
         @include section-title;
     }
 
     .job {
-
         @include entry-block;
 
         .job-responsibilities,
@@ -17,7 +15,6 @@
         }
 
         .job-header {
-
             @include block-header;
 
             .job-title {

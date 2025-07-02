@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 @mixin section-title {
   font-size: 1.25rem;
@@ -25,7 +25,6 @@
   margin-bottom: $margin-block-body;
   padding: 0.75rem 0;
   border-bottom: 0.1rem solid rgba($border-color, 1);
-
 
   &:last-child {
     border-bottom: none;
@@ -56,12 +55,11 @@
   flex: 1;
   margin-right: 0.625rem;
   color: $accent-color;
-  
 }
 
 @mixin block-location {
   font-size: $font-size-institution;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
   color: $text-color-light;
   font-style: italic;
 
@@ -107,7 +105,9 @@
   }
 }
 
-@mixin pill($bg: rgba($border-color, 0.3), $color: $text-color-light, $font-size: $font-size-base) {
+@mixin pill($bg: rgba($border-color, 0.3),
+  $color: $text-color-light,
+  $font-size: $font-size-base) {
   color: $color;
   background-color: $bg;
   padding: 0.125rem 0.5rem;
@@ -117,6 +117,3 @@
   white-space: nowrap;
   display: inline-block;
 }
-
-
-
