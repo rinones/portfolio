@@ -9,11 +9,7 @@
 
     .job {
 
-        @include block-body;
-        
-        @media print {
-            padding: 0.35rem 0;
-        }
+        @include entry-block;
 
         .job-responsibilities,
         .job-description {
@@ -30,8 +26,7 @@
 
             .job-period,
             .job-duration {
-                @include pill;
-                font-size: $font-size-job-duration;
+                @include pill($font-size: $font-size-period);
             }
         }
 

@@ -1,16 +1,16 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+// @use '../utils/variables' as *;
+// @use '../utils/mixins' as *;
 
-.skills-section {
-    .section-title {
-        @include section-title;
-    }
+// .skills-section {
+//     .section-title {
+//         @include section-title;
+//     }
 
-    .skills-list {
-        @include pill($bg: rgba($border-color, 0.3), $color: $text-color-light);
-        padding: 0.75rem 1.45rem;
-        border-radius: 1.8rem;
-        margin-top: $margin-languages;
-        font-size: $font-size-base;
-    }
-}
+//     .skills-list {
+//         @include pill($bg: rgba($border-color, 0.3), $color: $text-color-light);
+//         padding: 0.75rem 1.45rem;
+//         border-radius: 1.8rem;
+//         margin-top: $margin-languages;
+//         font-size: $font-size-base;
+//     }
+// }

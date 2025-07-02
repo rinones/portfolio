@@ -21,18 +21,30 @@ body {
   margin: 0;
   padding: 1.3rem 1.8rem;
 
+  @media (max-width: 900px) {
+    padding: 0.5rem 0.5rem;
+  }
+
   @media print {
     padding: 0;
   }
 }
 
 .cv-container {
-  max-width: 85%; 
+  max-width: 75%; 
   margin: 0 auto;
   background: white;
   box-shadow: $shadow-subtle;
   border-radius: 0.35rem;
-  padding: 1.35rem 3.65rem;
+  padding: 1.35rem 3.5rem;
+
+  @media (max-width: 1200px) {
+    max-width: 90%;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 100%;
+  }
 
     .job,
     .education {
@@ -59,9 +71,10 @@ body {
       justify-content: flex-start;
       gap: 2rem;
       flex-wrap: wrap;
-      padding: 0 0 0 1.8rem;
+      padding: 0 1.8rem 0 1.8rem;
 
-      @media (max-width: 700px) {
+      @media (max-width: 1000px) {
+        padding-top: 1rem;
         flex-direction: column;
         align-items: center;
         gap: 0.25rem;
@@ -90,11 +103,10 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 0.25rem;
+      gap: 0.5rem;
 
       .profile-summary {
         text-align: justify;
-        padding: 0rem 1.5rem 0.5rem 0.5rem;
       }
 
       .profile-portfolio {
@@ -102,10 +114,6 @@ body {
         @media print {
           display: block;
         }
-      }
-
-      .profile-portfolio, .contact-info {
-        padding: 0rem 0rem 0.5rem  0.5rem;
       }
 
       .name {
@@ -119,7 +127,7 @@ body {
 
       .contact-info {
         display: flex;
-        gap: $gap-contact-info;
+        gap: 1.2rem;
         flex-wrap: wrap;
         font-size: $font-size-contact-info;
         color: $text-color-light;
@@ -144,7 +152,7 @@ body {
         }
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: 750px) {
         align-items: center;
         text-align: center;
 
@@ -169,13 +177,11 @@ body {
     }
   }
 
-  // Estilos específicos para mantener la consistencia del diseño original
   .cv-container {
     .job:last-child {
       margin-bottom: 0;
     }
 
-    // Ajustes para texto justificado en listas
     .job-responsibilities li,
     .reports-list li,
     .inspections-list li {
@@ -184,7 +190,6 @@ body {
     }
   }
 
-  // Estilos generales para el acordeón
   .accordion {
     border-radius: 0.35rem;
     margin-bottom: 0.75rem;
@@ -203,10 +208,9 @@ body {
 
     .accordion-content {
       padding: $padding-accordion-content;
-      // background: #fff;
       border-radius: 0 0 0.35rem 0.35rem;
       border-top: 0.1rem solid $border-color;
-      display: none; // Cambia a block con JS si es necesario
+      display: none;
 
       @media print {
         display: block !important;
@@ -219,10 +223,9 @@ body {
 
   .job-float-img-wrapper {
     position: relative;
-    display: inline-block; // Solo ocupa el tamaño de la imagen
+    display: inline-block;
   }
 
-  // Regla global para todas las imágenes flotantes
   .job-float-img {
     float: right;
     width: auto;
@@ -236,6 +239,13 @@ body {
     box-shadow: 0 0.2rem 0.75rem rgba(44, 62, 80, 0.10);
     display: block;
     cursor: pointer;
+  }
+
+  .profile-portfolio {
+    a {
+      text-decoration: none;
+      color: $text-color-light;
+    }
   }
 
   

@@ -2,21 +2,15 @@
 @use '../utils/mixins' as *;
 
 .education-section {
-
-    margin-top: 2rem;
+  @include entry-block;
     .section-title {
         @include section-title;
     }
 
     .education {
 
-        @include block-body;
-
-        @media print {
-            padding: 0.45rem 0;
-        }
+        @include entry-block;
         
-
         .education-responsibilities,
         .education-description {
             @include responsibility-list;
@@ -32,8 +26,7 @@
 
             .education-period,
             .education-duration {
-                @include pill;
-                font-size: $font-size-education-period;
+                @include pill($font-size: $font-size-period);
             }
         }
 
