@@ -271,7 +271,7 @@ body {
     max-width: 90%;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .cv-container {
     max-width: 100%;
   }
@@ -303,7 +303,7 @@ body {
   flex-wrap: wrap;
   padding: 0 1.8rem 0 1.8rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .cv-container .cv-header .header-flex {
     padding-top: 1rem;
     flex-direction: column;
@@ -377,7 +377,7 @@ body {
   color: inherit;
   display: inline-block;
 }
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   .cv-container .cv-header .personal-info {
     align-items: center;
     text-align: center;
