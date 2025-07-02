@@ -269,11 +269,13 @@ body {
 @media (max-width: 1200px) {
   .cv-container {
     max-width: 90%;
+    padding: 0.25rem;
   }
 }
 @media (max-width: 900px) {
   .cv-container {
     max-width: 100%;
+    padding: 0.25rem;
   }
 }
 @media print {
@@ -309,6 +311,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
+    padding: 0 1rem 0 1rem;
   }
 }
 .cv-container .cv-header .profile-picture-wrapper {
