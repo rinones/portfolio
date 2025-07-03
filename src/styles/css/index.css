@@ -247,11 +247,6 @@ body {
   margin: 0;
   padding: 1.3rem 1.8rem;
 }
-@media (max-width: 900px) {
-  body {
-    padding: 0.5rem 0.5rem;
-  }
-}
 @media print {
   body {
     padding: 0;
@@ -265,16 +260,6 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 0.35rem;
   padding: 1.35rem 3.5rem;
-}
-@media (max-width: 1200px) {
-  .cv-container {
-    max-width: 90%;
-  }
-}
-@media (max-width: 900px) {
-  .cv-container {
-    max-width: 100%;
-  }
 }
 @media print {
   .cv-container .job,
@@ -302,14 +287,6 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
   padding: 0 1.8rem 0 1.8rem;
-}
-@media (max-width: 900px) {
-  .cv-container .cv-header .header-flex {
-    padding-top: 1rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
 }
 .cv-container .cv-header .profile-picture-wrapper {
   flex: 0 0 auto;
@@ -376,20 +353,6 @@ body {
   vertical-align: middle;
   color: inherit;
   display: inline-block;
-}
-@media (max-width: 900px) {
-  .cv-container .cv-header .personal-info {
-    align-items: center;
-    text-align: center;
-  }
-  .cv-container .cv-header .personal-info .contact-info {
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: center;
-    padding: 0;
-    background: none;
-    box-shadow: none;
-  }
 }
 .cv-container .education-section,
 .cv-container .skills-section {
